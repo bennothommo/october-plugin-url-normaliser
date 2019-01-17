@@ -91,17 +91,15 @@ class NormaliseMiddleware
                 $changed = true;
             }
 
-            if ($changed === true) {
-                if ($settings->mode === 'redirect') {
-                    return redirect()->away(
-                        $urlInfo['scheme'] . '://' . $domain . $requestPath .
-                        ((!empty($urlInfo['query'])) ? '?' . $urlInfo['query'] : '') .
-                        ((!empty($urlInfo['fragment'])) ? '#' . $urlInfo['fragment'] : ''), 301);
-                } else {
-                    \BennoThommo\Meta\Link::set('canonical', $urlInfo['scheme'] . '://' . $domain . $requestPath .
+            if ($changed === true && $settings->mode === 'redirect') {
+                return redirect()->away(
+                    $urlInfo['scheme'] . '://' . $domain . $requestPath .
                     ((!empty($urlInfo['query'])) ? '?' . $urlInfo['query'] : '') .
-                    ((!empty($urlInfo['fragment'])) ? '#' . $urlInfo['fragment'] : ''));
-                }
+                    ((!empty($urlInfo['fragment'])) ? '#' . $urlInfo['fragment'] : ''), 301);
+            } else {
+                \BennoThommo\Meta\Link::set('canonical', $urlInfo['scheme'] . '://' . $domain . $requestPath .
+                ((!empty($urlInfo['query'])) ? '?' . $urlInfo['query'] : '') .
+                ((!empty($urlInfo['fragment'])) ? '#' . $urlInfo['fragment'] : ''));
             }
         }
 
