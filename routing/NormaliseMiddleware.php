@@ -29,11 +29,7 @@ class NormaliseMiddleware
         $normalisedUrl = Normalise::url($originalUrl);
 
         if ($originalUrl !== $normalisedUrl) {
-            if (Normalise::doRedirect()) {
-                return redirect()->away($normalisedUrl, 301);
-            } else {
-                \BennoThommo\Meta\Link::set('canonical', $normalisedUrl);
-            }
+            return redirect()->away($normalisedUrl, 301);
         }
 
         return $next($request);

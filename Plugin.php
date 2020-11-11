@@ -11,9 +11,6 @@ use Illuminate\Database\QueryException;
 
 class Plugin extends PluginBase
 {
-    public $require = [
-        'BennoThommo.Meta'
-    ];
 
     public function pluginDetails()
     {
@@ -61,7 +58,7 @@ class Plugin extends PluginBase
         if (!$this->databaseExists()) {
             return;
         }
-        
+
         // Add normalise middleware
         $this->app['Illuminate\Contracts\Http\Kernel']
             ->prependMiddleware('BennoThommo\UrlNormaliser\Routing\NormaliseMiddleware');
@@ -101,10 +98,10 @@ class Plugin extends PluginBase
             });
         }
     }
-    
+
     /**
      * Detects if the database exists.
-     * 
+     *
      * @return bool
      */
     public function databaseExists()

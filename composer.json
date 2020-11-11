@@ -13,7 +13,6 @@
     ],
     "require": {
         "php": ">=7.0.8",
-        "composer/installers": "~1.0",
-        "bennothommo/oc-meta-plugin": "^1.0.3"
+        "composer/installers": "~1.0"
     }
 }

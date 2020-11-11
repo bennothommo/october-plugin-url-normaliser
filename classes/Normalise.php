@@ -155,18 +155,6 @@ class Normalise
     }
 
     /**
-     * Determines whether we will 301 redirect incorrect URLs.
-     *
-     * @return bool
-     */
-    public static function doRedirect()
-    {
-        $instance = self::instance();
-
-        return $instance->settings->mode === 'redirect';
-    }
-
-    /**
      * Determines whether we will normalise navigation URLs.
      *
      * @return bool

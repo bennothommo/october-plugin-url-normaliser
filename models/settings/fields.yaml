@@ -1,14 +1,5 @@
 tabs:
     fields:
-        mode:
-            label: bennothommo.urlnormaliser::lang.settings.mode.label
-            tab: bennothommo.urlnormaliser::lang.settings.tabs.urlSettings
-            type: dropdown
-            span: left
-            options:
-                canon: bennothommo.urlnormaliser::lang.settings.mode.options.canon
-                redirect: bennothommo.urlnormaliser::lang.settings.mode.options.redirect
-            default: canon
         www_prefix:
             label: bennothommo.urlnormaliser::lang.settings.www_prefix.label
             tab: bennothommo.urlnormaliser::lang.settings.tabs.urlSettings

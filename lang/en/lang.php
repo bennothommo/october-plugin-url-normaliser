@@ -14,13 +14,6 @@ return [
         'tabs' => [
             'urlSettings' => 'URL Settings'
         ],
-        'mode' => [
-            'label' => 'Normalisation Mode',
-            'options' => [
-                'canon' => 'Add a Canonical URL link tag',
-                'redirect' => 'Redirect non-conforming URLs'
-            ],
-        ],
         'force_https' => [
             'label' => 'Force HTTPS?',
             'comment' => 'If checked, the normalised URLs will always use a secure address.'
