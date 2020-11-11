@@ -18,6 +18,10 @@ return [
             'label' => 'Force HTTPS?',
             'comment' => 'If checked, the normalised URLs will always use a secure address.'
         ],
+        'redirect_indexphp' => [
+            'label' => 'Redirect index.php?',
+            'comment' => 'If checked, the normalised URLs will exclude index.php from path.'
+        ],
         'normalise_nav' => [
             'label' => 'Normalise URLs in navigation menus?',
             'comment' => 'If checked, normalisation will be applied to all internal links in a Static Menu. This will
