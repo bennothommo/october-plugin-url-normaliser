@@ -1,3 +1,10 @@
+
+**Please note that this repository is no longer being maintained.**<br>
+Due to [a disagreement](https://github.com/wintercms/winter/issues/5) with the founders of October CMS, I will no longer be providing updates for the October CMS version of this plugin. I will keep the repository available for people to use, but will only be updating the [Winter CMS version](https://github.com/bennothommo/wn-url-normaliser-plugin) of this plugin.
+
+---
+<br>
+
 # URL Normaliser Plugin
 
 Normalise URLs for your October CMS website and ensure that search engines only index your canonical paths to prevent duplicate content. This plugin works by either providing a canonical URL `link` tag in your page (with help from the [Meta Plugin](https://github.com/bennothommo/october-plugin-meta)) or through using HTTP 301 redirects on your public pages.
